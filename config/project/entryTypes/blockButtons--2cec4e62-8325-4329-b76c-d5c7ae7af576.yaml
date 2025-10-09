@@ -1,0 +1,40 @@
+color: violet
+description: null
+fieldLayouts:
+  73eb10ce-58f6-4af6-9403-bac90d17ac53:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-10-02T12:02:12+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f2506d06-ffe1-4e72-a921-0af05fc12846 # Matrix - Buttons
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Buttons
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 61bf0690-446c-43c9-8c04-4b11612d74d0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 37f96e94-0f96-4ed9-ac1e-f190e87d1b33
+        userCondition: null
+handle: blockButtons
+hasTitleField: false
+icon: link-horizontal
+name: Buttons
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

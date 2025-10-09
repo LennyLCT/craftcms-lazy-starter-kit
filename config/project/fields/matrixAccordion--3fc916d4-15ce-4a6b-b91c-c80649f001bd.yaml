@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: matrixAccordion
+instructions: null
+name: 'Matrix - Accordion'
+searchable: true
+settings:
+  createButtonLabel: 'New Accordion'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 04ac80ab-5fc1-41b5-bdbb-932462b5392d # Accordion Entry
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

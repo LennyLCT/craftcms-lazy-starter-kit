@@ -1,0 +1,16 @@
+{% set builder = builder ?? false %}
+{% extends builder ? "_partials/matrix.twig" : "_partials/cke.twig" %}
+{% set classWrapper = builder ? 'blocks blocks--media' : 'inlines inlines--media' %}
+{% set classContent = builder ? 'blocks__popout' : '' %}
+
+{% block content %}
+  {{ include('_components/label.twig', {
+    label: "Block Media",
+  }) }}
+  {{ include("_components/media.twig", {
+    asset: entry.assetMedia.eagerly().one() ?? null,
+    showCaption: entry.mediaShowCaption
+  }, withContext = false) }}
+{% endblock %}
+
+

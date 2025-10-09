@@ -1,0 +1,77 @@
+columnSuffix: null
+handle: matrixBuilder
+instructions: null
+name: 'Matrix - Builder'
+searchable: true
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - a0e826d1-b07d-436b-a836-517709848314 # Text
+        -
+          - group
+          - Text
+    -
+      __assoc__:
+        -
+          - uid
+          - b049044a-c809-41e6-9e27-43e22b6c394b # Accordion
+        -
+          - group
+          - Text
+    -
+      __assoc__:
+        -
+          - uid
+          - 82e2a38f-ac8e-4b00-8b0c-d9ab4dc9ad7d # Media
+        -
+          - group
+          - Media
+    -
+      __assoc__:
+        -
+          - uid
+          - 9b278eea-1d19-4a12-87d0-8fd0d4ccade2 # Gallery
+        -
+          - group
+          - Media
+    -
+      __assoc__:
+        -
+          - uid
+          - 2cec4e62-8325-4329-b76c-d5c7ae7af576 # Buttons
+        -
+          - group
+          - CTA
+    -
+      __assoc__:
+        -
+          - uid
+          - f1af4550-8b3b-46b7-926d-f0807cac7bf3 # Cards
+        -
+          - group
+          - CTA
+    -
+      __assoc__:
+        -
+          - uid
+          - 76206244-6c91-4de1-b3d0-68c5d6a77369 # CTA
+        -
+          - group
+          - CTA
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

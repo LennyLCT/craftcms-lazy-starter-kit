@@ -1,0 +1,94 @@
+color: violet
+description: null
+fieldLayouts:
+  898fc9a8-6463-47fc-92ac-5cab03617d85:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:e3da269c-60c2-4d60-9a98-718ef293562c'
+      - 'layoutElement:4ca0b060-ab25-4210-ba7a-04339db07b5d'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-08-12T10:25:49+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e2850ac0-af58-4d32-9596-b15239d9567e # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e07011df-84b0-4504-8c98-7af8c534248c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-14T11:45:42+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 17c0c6a4-80a6-4cef-84f4-ebefe3af9d39 # Text - Multi
+            handle: headline
+            includeInCards: true
+            instructions: null
+            label: Headline
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ca0b060-ab25-4210-ba7a-04339db07b5d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-12T10:25:49+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 048ca300-746f-47c7-88e8-03271c08c318 # Rich Text - Simple
+            handle: teaser
+            includeInCards: true
+            instructions: null
+            label: Teaser
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e3da269c-60c2-4d60-9a98-718ef293562c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-29T09:21:46+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c2078d68-c6cf-42ee-ad68-931b8a4b5cdb # Link - Native
+            handle: button
+            includeInCards: false
+            instructions: null
+            label: Button
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b68b894d-8c8e-4fc8-af1c-45b45dfc82d5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f34d0118-b348-474b-bb80-326cd0d81798
+        userCondition: null
+handle: compCard
+hasTitleField: false
+icon: card-heart
+name: Card
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

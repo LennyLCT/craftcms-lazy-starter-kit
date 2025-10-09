@@ -1,0 +1,57 @@
+color: orange
+fieldLayouts:
+  7a135f6c-e89d-43c6-a6eb-d084dbba686a:
+    cardView:
+      - 'layoutElement:293325f0-efb5-4532-bed8-8ece59244dd0'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-09-18T12:40:27+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f031cebf-f66e-478f-971f-53923dc0c7f2 # File - Media
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Asset
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 293325f0-efb5-4532-bed8-8ece59244dd0
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2024-11-14T11:12:56+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 177e5629-be0d-45a5-8751-ee4a081d01d0 # Switch - Off
+            handle: mediaShowCaption
+            includeInCards: false
+            instructions: null
+            label: Caption
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 26b82635-94fe-4602-bc9b-85d9440f803d
+            userCondition: null
+            warning: null
+            width: 25
+        name: Content
+        uid: bf1c6947-6b44-4822-ae79-f188bf69d840
+        userCondition: null
+handle: blockMedia
+hasTitleField: false
+icon: image
+name: Media
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

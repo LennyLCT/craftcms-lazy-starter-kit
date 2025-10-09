@@ -1,0 +1,49 @@
+{% set builder = builder ?? false %}
+{% extends builder ? "_partials/matrix.twig" : "_partials/cke.twig" %}
+{% set classWrapper = builder ? 'blocks blocks--gallery' : 'inlines inlines--gallery' %}
+{% set classContent = builder ? 'blocks__feature' : '' %}
+
+{% block content %}
+  {% set images = entry.images.eagerly().all() ?? null %}
+  {% if images %}
+    {{ include('_components/label.twig', {
+      label: "Block Gallery",
+    }) }}
+    <div class="grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 w-full gap-3">
+      {% for image in images %}
+        {% set classes = '' %}
+
+        {% if loop.index == 1 %}
+          {% set classes = 'aspect-video md:aspect-auto col-span-1 md:col-span-2 row-span-1 md:row-span-2' %}
+        {% elseif loop.index == 2 %}
+          {% set classes = 'aspect-video md:aspect-auto col-span-1 row-span-1' %}
+        {% elseif loop.index == 3 %}
+          {% set classes = 'aspect-video md:aspect-auto col-span-2 md:col-span-1 row-span-2 md:row-span-1' %}
+        {% else %}
+          {% set classes = 'hidden' %}
+        {% endif %}
+
+        {%- set parts = [] -%}
+
+        {%- if image.mediaCaption -%}
+          {% set parts = parts|merge([image.mediaCaption]) %}
+        {%- endif -%}
+        {%- if image.mediaCopyright -%}
+          {% set parts = parts|merge(['© ' ~ image.mediaCopyright]) %}
+        {%- endif -%}
+
+        <a class="block {{ classes }}"
+           href="{{ image.getUrl({ width: 1600, quality: 90 }) }}"
+           data-gallery="gallery{{ entry.id }}"
+           data-description="{{ parts|join(' ') }}"
+           data-animate="fade-in">
+          {{ include("_components/image.twig", {
+            image: image,
+            objectFit: true,
+            class: 'rounded-md'
+          }, withContext = false) }}
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}

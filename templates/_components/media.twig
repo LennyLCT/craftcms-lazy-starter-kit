@@ -1,0 +1,36 @@
+{%- set asset = asset ?? null -%}
+{%- set showCaption = showCaption ?? false -%}
+{%- set parts = [] -%}
+
+{%- if asset.mediaCaption -%}
+  {% set parts = parts|merge([asset.mediaCaption]) %}
+{%- endif -%}
+{%- if asset.mediaCopyright -%}
+  {% set parts = parts|merge(['© ' ~ asset.mediaCopyright]) %}
+{%- endif -%}
+
+{%- if asset -%}
+  {%- switch asset.kind -%}
+  {%- case 'video' -%}
+    <div>
+      <video class="h-full w-full object-fill aspect-video" controls playsinline>
+        <source src="{{ asset.getUrl() }}" type="video/{{ asset.extension }}" />
+      </video>
+    </div>
+  {%- case 'audio' -%}
+    <audio class="w-full" controls>
+      <source src="{{ asset.getUrl() }}" type="audio/{{ asset.extension }}" />
+    </audio>
+  {%- case 'image' -%}
+    <div data-animate="fade-in">
+      {{ include("_components/image.twig", {
+        image: asset,
+        class: 'rounded-md'
+      }, withContext = false) }}
+    </div>
+  {%- endswitch -%}
+
+  {% if showCaption and parts %}
+    <div class="p-2 text-base">{{ parts|join(' ') }}</div>
+  {% endif %}
+{%- endif -%}

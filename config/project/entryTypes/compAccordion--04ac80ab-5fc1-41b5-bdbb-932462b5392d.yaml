@@ -1,0 +1,82 @@
+color: green
+description: null
+fieldLayouts:
+  dccbe5f7-4092-4749-9a85-c8a377fdb08c:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:f5b31de1-27bd-4d5b-b4f2-d55ac6415806'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-11-14T11:44:15+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 17c0c6a4-80a6-4cef-84f4-ebefe3af9d39 # Text - Multi
+            handle: headline
+            includeInCards: true
+            instructions: null
+            label: Überschrift
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f5b31de1-27bd-4d5b-b4f2-d55ac6415806
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-18T12:39:52+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 6243b5f2-9474-47a0-99f2-24d5a6cc5832 # Rich Text - Rich
+            handle: text
+            includeInCards: false
+            instructions: null
+            label: Text
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2f81e9a4-b86d-4811-acbc-2c63e797e15b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a321c020-1608-4e37-ae5d-e907f0f8c82e
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-11-14T11:00:36+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 177e5629-be0d-45a5-8751-ee4a081d01d0 # Switch - Off
+            handle: switchOpen
+            includeInCards: false
+            instructions: null
+            label: 'Open?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1914e261-c0f4-4bd8-ba28-a8d24eb68efc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 3683cb70-ad21-409d-bbc8-8979c6309529
+        userCondition: null
+handle: compAccordion
+hasTitleField: false
+icon: horizontal-rule
+name: 'Accordion Entry'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

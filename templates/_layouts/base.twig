@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="{{ craft.app.language|slice(0, 2) }}">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% hook 'seomateMeta' %}
+  {% include "_globals/favicons" %}
+  {% include "_globals/fonts" %}
+  {% include "_globals/matomo" %}
+  {{ craft.vite.script("src/js/app.js", false) }}
+</head>
+<body data-signals="{ modal: false }">
+{% cache globally using key 'nav__' ~ craft.app.request.pathInfo %}
+  {% include '_globals/nav' %}
+{% endcache %}
+<main id="content">
+  {% block main %}{% endblock %}
+</main>
+{% include '_globals/footer' %}
+{% include '_globals/search' %}
+{% if entry is defined and canSave(entry) %}<a href="{{ cpUrl("preview/#{entry.id}") }}" title="Edit {{ entry.title }}" target="_blank" class="hidden lg:inline fixed bottom-0 left-0 p-4">
+    ✏️</a>{% endif %}
+</body>
+</html>

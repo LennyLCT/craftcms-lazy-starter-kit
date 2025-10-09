@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+@import './_base.css';
+@import './_utilities.css';
+@import './_components.css';
+@import './_layout.css';
+@import './_vendor.css';
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --content: './templates/**/*.twig', './src/**/*.css', './src/**/*.vue, ./src/**/*.js';
+
+  --font-sans: 'Noto sans', 'sans-serif';
+
+  --color-primary: oklch(55.3% 0.195 38.402);
+
+  --breakpoint-2xs: 384px;
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1840px;
+  --breakpoint-switch: 1280px;
+}
+
+:root {
+  /* layout */
+  --gap: clamp(0.5rem, 6vw, 3rem);
+  --gap-blocks: clamp(0.5rem, 6vw, 2rem);
+  --full: minmax(var(--gap), 1fr);
+  --feature: minmax(0, 200px);
+  --popout: minmax(0, 100px);
+  --content: min(var(--breakpoint-lg), 100% - var(--gap) * 2);
+}
+
+@utility prose {
+  @apply max-w-full;
+  --tw-prose-body: var(--color-black);
+  --tw-prose-headings: var(--color-black);
+  --tw-prose-counters: var(--color-primary);
+  --tw-prose-bullets: var(--color-primary);
+  --tw-prose-hr: var(--color-stone-300);
+
+  h1:not(.not-prose h1, .not-prose *) {
+    @apply ui-h1;
+  }
+
+  h2:not(.not-prose h2, .not-prose *) {
+    @apply ui-h2;
+  }
+
+  h3:not(.not-prose h3, .not-prose *) {
+    @apply ui-h3;
+  }
+
+  h4:not(.not-prose h4, .not-prose *) {
+    @apply ui-h4;
+  }
+
+  h5,
+  h6,
+  strong {
+    @apply ui-bold;
+  }
+
+  ul, ol {
+    @apply mb-8;
+  }
+
+  :not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    a {
+      @apply ui-link;
+    }
+  }
+}
+
+
+
+
+

@@ -1,0 +1,91 @@
+columnSuffix: null
+handle: card
+instructions: null
+name: Card
+searchable: true
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - c6bd19e1-3a4e-46ef-81de-d6f76e72fe2e
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    0:
+                      - name
+                      - Content
+                    1:
+                      - uid
+                      - 2d04ff34-3d69-4e6e-9f82-dfa3704717f9
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - providesThumbs
+                              - false
+                            8:
+                              - includeInCards
+                              - false
+                            9:
+                              - width
+                              - 100
+                            10:
+                              - dateAdded
+                              - '2025-10-07T08:51:04+00:00'
+                            11:
+                              - uid
+                              - 914ae46d-5dd7-4afd-b5a3-32fbed3aecae
+                            14:
+                              - fieldUid
+                              - e2850ac0-af58-4d32-9596-b15239d9567e # Image
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - teaser
+                            2:
+                              - label
+                              - Teaser
+                            6:
+                              - required
+                              - false
+                            7:
+                              - providesThumbs
+                              - false
+                            8:
+                              - includeInCards
+                              - false
+                            9:
+                              - width
+                              - 100
+                            10:
+                              - dateAdded
+                              - '2025-10-07T08:51:04+00:00'
+                            11:
+                              - uid
+                              - 41d42c36-230e-4e28-96f8-8a4801e9694e
+                            14:
+                              - fieldUid
+                              - 048ca300-746f-47c7-88e8-03271c08c318 # Rich Text - Simple
+            3:
+              - cardThumbAlignment
+              - end
+  viewMode: pane
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

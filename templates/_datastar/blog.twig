@@ -1,0 +1,46 @@
+{% set offset = offset ?? 0 %}
+{% set limit = limit ?? 6 %}
+{% set filter = signals.filter ?? '' %}
+
+{% set entryAllCount = craft.entries.section('blog') %}
+{% set entryQuery = craft.entries.section('blog').eagerly().limit(limit).offset(offset).orderBy('date DESC') %}
+
+{% if filter %}
+  {% set filterEntry = craft.entries.section('categories').slug(filter).one() %}
+  {% do entryAllCount.andRelatedTo(filterEntry) %}
+  {% do entryQuery.andRelatedTo(filterEntry) %}
+{% endif %}
+
+{% set entries = entryQuery.all() %}
+{% set hasMore = entryAllCount.count() > offset + (entries|length) %}
+
+{% if not entries %}
+  {% patchelements %}
+    <div id="result">
+      <div class="text-2xl">
+        <p>🫣 No results found for "{{ filter }}".</p>
+      </div>
+    </div>
+  {% endpatchelements %}
+  {% patchelements %}
+    <div id="loadmore"></div>
+  {% endpatchelements %}
+{% else %}
+  {% patchelements with {selector: '#result', mode: offset == 0 ? 'inner' : 'append'} %}
+    {% for entry in entries %}
+      {{ entry.render() }}
+    {% endfor %}
+  {% endpatchelements %}
+
+  {% if hasMore %}
+    {% patchelements %}
+      <div id="loadmore" class="mt-6">
+        <button data-on-click="{{ datastar.get('_datastar/blog.twig', {offset: offset + limit}) }}" class="ui-btn ui-btn--lg">{{ 'Load more'|t }}</button>
+      </div>
+    {% endpatchelements %}
+  {% else %}
+    {% patchelements %}
+      <div id="loadmore"></div>
+    {% endpatchelements %}
+  {% endif %}
+{% endif %}

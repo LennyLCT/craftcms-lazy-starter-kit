@@ -1,0 +1,126 @@
+columnSuffix: null
+handle: seo
+instructions: null
+name: Seo
+searchable: true
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - 7db855ca-b974-4597-bc90-4345bdd618c4
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    0:
+                      - name
+                      - Content
+                    1:
+                      - uid
+                      - 57532a41-8dd8-4271-a63f-bc3d1e8b3ba8
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - seoTitle
+                            2:
+                              - label
+                              - Title
+                            6:
+                              - required
+                              - false
+                            7:
+                              - providesThumbs
+                              - false
+                            8:
+                              - includeInCards
+                              - false
+                            9:
+                              - width
+                              - 100
+                            10:
+                              - dateAdded
+                              - '2025-10-07T08:47:36+00:00'
+                            11:
+                              - uid
+                              - 9bd2388d-d293-4f1b-8283-61a80c29e4ac
+                            14:
+                              - fieldUid
+                              - c05cf09b-1380-4613-8fd9-1e1a72af0e79 # Text - Single
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - seoDescription
+                            2:
+                              - label
+                              - Description
+                            6:
+                              - required
+                              - false
+                            7:
+                              - providesThumbs
+                              - false
+                            8:
+                              - includeInCards
+                              - false
+                            9:
+                              - width
+                              - 100
+                            10:
+                              - dateAdded
+                              - '2025-10-07T08:47:36+00:00'
+                            11:
+                              - uid
+                              - f9112d3e-b4f8-4c57-bbba-1c369f98698d
+                            14:
+                              - fieldUid
+                              - c05cf09b-1380-4613-8fd9-1e1a72af0e79 # Text - Single
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - seoImage
+                            6:
+                              - required
+                              - false
+                            7:
+                              - providesThumbs
+                              - false
+                            8:
+                              - includeInCards
+                              - false
+                            9:
+                              - width
+                              - 100
+                            10:
+                              - dateAdded
+                              - '2025-10-07T08:47:36+00:00'
+                            11:
+                              - uid
+                              - fb364fbf-e22b-4dbe-8570-724df7c5e068
+                            14:
+                              - fieldUid
+                              - e2850ac0-af58-4d32-9596-b15239d9567e # Image
+            3:
+              - cardThumbAlignment
+              - end
+  viewMode: pane
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

@@ -1,0 +1,11 @@
+.goverlay {
+  @apply !bg-white/95;
+}
+
+.gbtn {
+  @apply !rounded-none hover:!bg-black;
+}
+
+.gslide-image {
+  @apply !shadow-none;
+}

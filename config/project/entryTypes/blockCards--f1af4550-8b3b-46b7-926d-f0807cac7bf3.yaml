@@ -1,0 +1,74 @@
+color: violet
+description: null
+fieldLayouts:
+  826d1a7d-a3bb-4b18-960b-149ba20b54be:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-10-02T11:45:37+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c07bd68f-efab-420f-ad23-7131c2b59410 # Grid
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f59f188-6699-4347-a393-7cc6ddd680fc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-22T07:03:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 87b770e6-4e90-42b9-bee3-ce94aba9b182 # Matrix - Cards
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Cards
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5a977f93-3b0e-418d-a7a7-dd5cb632823b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-22T07:03:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 3f7e97cc-08fd-47b5-89d3-c8cc473aae8b
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Pages
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 66e8e592-ef20-4795-a92f-0c7d3a32b8dc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fe059976-84c8-4bae-adf4-cae35fb260a4
+        userCondition: null
+handle: blockCards
+hasTitleField: false
+icon: cards
+name: Cards
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

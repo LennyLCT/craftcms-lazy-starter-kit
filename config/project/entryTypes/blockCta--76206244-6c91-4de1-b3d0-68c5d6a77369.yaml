@@ -1,0 +1,133 @@
+color: violet
+description: null
+fieldLayouts:
+  eb77256e-c09a-4da9-b4e4-f6d34fe0df51:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:1d7830ee-7479-40b2-96b0-17200bd14633'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-11-14T11:44:52+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 17c0c6a4-80a6-4cef-84f4-ebefe3af9d39 # Text - Multi
+            handle: headline
+            includeInCards: true
+            instructions: null
+            label: Überschrift
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d7830ee-7479-40b2-96b0-17200bd14633
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-26T07:45:19+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: e2850ac0-af58-4d32-9596-b15239d9567e # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60975007-2c9c-4def-920c-c569249360dc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-09-29T10:16:23+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c2078d68-c6cf-42ee-ad68-931b8a4b5cdb # Link - Native
+            handle: button
+            includeInCards: false
+            instructions: null
+            label: Button
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8731b252-877d-4cfa-80b2-c380c4af26be
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: 161b50d7-4fd5-4b0e-aa62-81f5857f27b1
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-11-14T11:09:57+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 177e5629-be0d-45a5-8751-ee4a081d01d0 # Switch - Off
+            handle: switchFull
+            includeInCards: false
+            instructions: null
+            label: 'Full width'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2f0f4a25-fdf8-4cf1-a7c5-6591cf58478a
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2024-11-14T11:05:02+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 177e5629-be0d-45a5-8751-ee4a081d01d0 # Switch - Off
+            handle: switchLayer
+            includeInCards: false
+            instructions: null
+            label: 'Image Layer'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f919de8f-8fc8-4c89-b438-ccf0e409eb0d
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2024-11-14T11:05:02+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 177e5629-be0d-45a5-8751-ee4a081d01d0 # Switch - Off
+            handle: switchInvert
+            includeInCards: false
+            instructions: null
+            label: 'Invert text'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1bae623-7325-44f0-9281-7ee78b45e5c8
+            userCondition: null
+            warning: null
+            width: 25
+        name: Settings
+        uid: 16667a60-8683-4eb5-8a85-02074cf93715
+        userCondition: null
+handle: blockCta
+hasTitleField: false
+icon: bullhorn
+name: CTA
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

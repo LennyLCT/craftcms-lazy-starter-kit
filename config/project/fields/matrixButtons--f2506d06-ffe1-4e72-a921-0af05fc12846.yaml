@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: matrixButtons
+instructions: null
+name: 'Matrix - Buttons'
+searchable: false
+settings:
+  createButtonLabel: 'New button'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - ceb614ca-f066-47cb-8d5e-647c282b69db # Button
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

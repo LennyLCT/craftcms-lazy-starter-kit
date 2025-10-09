@@ -1,0 +1,37 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 916e0660-c1f0-4d74-adbd-e0b797d79894 # Page / Matrix Builder
+  -
+    uid: 81a8d92c-0706-448f-bd2b-8506e012dccb # Page / CKE Builder
+  -
+    uid: 9800e5de-6b70-4e9a-a491-54ef32087d74 # Page / Blog Datastar
+  -
+    uid: d2c185ad-8cc0-4ff6-bae6-f4f27e1c256c # Page / Blog Vue
+handle: pages
+maxAuthors: 1
+name: Pages
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  6eab4b84-63fb-4382-bdd7-d2bee959aafb: # $SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _entry
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 26c1baad-7a84-414d-9292-c2740a3a1584
+type: structure

@@ -1,0 +1,51 @@
+{% set builder = builder ?? false %}
+{% set image = entry.image.eagerly().one() ?? null %}
+{% set button = entry.button %}
+
+{% extends builder ? "_partials/matrix.twig" : "_partials/cke.twig" %}
+{% set classWrapper = builder ? 'blocks' : 'inlines' %}
+{% set classContent = builder ? entry.switchFull ? 'relative blocks__full' : 'relative blocks__feature' : '' %}
+
+{% if image %}
+  {% set classWrapper = classWrapper ~ (builder ? ' blocks--cta-image' : ' inlines--cta-image') %}
+{% else %}
+  {% set classWrapper = classWrapper ~ (builder ? ' blocks--cta' : ' inlines--cta') %}
+{% endif %}
+
+{% block content %}
+  {{ include('_components/label.twig', {
+    label: "Block Call to action"
+  }) }}
+  <div class="stack stack--end">
+    {% if image %}
+      <div
+        data-animate="fade-in"
+        class="stack__image {{ (entry.switchInvert and entry.switchLayer) ? 'after:absolute after:inset-0 after:bg-black/50' : (entry.switchLayer ? ' after:absolute after:inset-0  after:bg-white/50' : '') }}">
+        {{ include("_components/image.twig", {
+          image: image,
+          sizes: [1980, 1400, 800],
+          objectFit: true,
+          class: 'w-full h-full md:max-h-[50vh]',
+        }, withContext = false) }}
+      </div>
+    {% endif %}
+    <div class="stack__content layout" data-animate="zoom-in">
+      <div class="{{ entry.switchFull ? 'layout__feature' : 'layout__content' }}{{ image ? ' py-12' }} space-y-6">
+        <p class="ui-h2{{ entry.switchInvert and image ? ' text-white' }}">
+          {{ entry.headline|nl2br }}
+        </p>
+        {% if button %}
+          {% include '_components/button.twig' with {
+            label: button.label ?? button.title,
+            url: button.url,
+            size: 'lg',
+            target: button.target ? '_blank' : null,
+            rel: button.target ? 'noopener noreferrer' : null,
+            'aria-label': button.ariaLabel,
+            download: button.download,
+          } %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

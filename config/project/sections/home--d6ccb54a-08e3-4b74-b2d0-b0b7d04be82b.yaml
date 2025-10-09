@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 916e0660-c1f0-4d74-adbd-e0b797d79894 # Page / Matrix Builder
+handle: home
+maxAuthors: 1
+name: Home
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  6eab4b84-63fb-4382-bdd7-d2bee959aafb: # $SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _entry
+    uriFormat: __home__
+type: single

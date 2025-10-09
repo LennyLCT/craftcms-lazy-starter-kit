@@ -1,0 +1,188 @@
+dateModified: 1760014415
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: singles
+      tableAttributes:
+        - status
+        - dateCreated
+        - dateUpdated
+        - revisionCreator
+        - link
+      type: native
+    -
+      heading: Channels
+      key: 'heading:d71c71f6-6f35-4a88-bf26-efad5b7a4452'
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:04c7059c-00d6-416e-a590-757fea296201' # Blog
+      tableAttributes:
+        - status
+        - dateUpdated
+        - link
+        - 'field:dbbb65c3-5ee4-438d-8436-b6e57e74daf5' # Relation - Categories
+      type: native
+    -
+      key: 'section:6686f777-cfa0-442a-964f-76aeefb81ba6' # Categories
+      type: native
+    -
+      heading: Structures
+      key: 'heading:2b70867d-645f-4be6-a835-37de0752bcab'
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:d55a22f5-2f99-4c7c-822f-eb8623035eeb' # Navigation
+      tableAttributes:
+        - status
+        - dateCreated
+        - authors
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:036fe1f3-1a67-4bc2-a89f-aa606c436474' # Pages
+      tableAttributes:
+        - status
+        - type
+        - dateCreated
+        - dateUpdated
+        - link
+      type: native
+email:
+  fromEmail: $EMAIL_SYSTEM_EMAIL_ADDRESS
+  fromName: $EMAIL_SENDER_NAME
+  replyToEmail: $EMAIL_REPLY_TO_ADDRESS
+  template: null
+  transportSettings:
+    command: '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  files:
+    hasUrls: true
+    name: Files
+    settings:
+      path: $SITE_FILES_PATH
+    type: craft\fs\Local
+    url: $SITE_FILES_URL
+  transforms:
+    hasUrls: true
+    name: Transforms
+    settings:
+      path: $SITE_TRANSFORMS_PATH
+    type: craft\fs\Local
+    url: $SITE_TRANSFORMS_URL
+meta:
+  __names__:
+    0a5600e8-07a6-4292-bc21-d0e142d9dc22: 'Matrix - Builder' # Matrix - Builder
+    0b6dd59c-982a-43fa-908f-143e8ef509f2: Date # Date
+    2cec4e62-8325-4329-b76c-d5c7ae7af576: Buttons # Buttons
+    3fc916d4-15ce-4a6b-b91c-c80649f001bd: 'Matrix - Accordion' # Matrix - Accordion
+    04ac80ab-5fc1-41b5-bdbb-932462b5392d: 'Accordion Entry' # Accordion Entry
+    04c7059c-00d6-416e-a590-757fea296201: Blog # Blog
+    4f40df4d-988a-4b75-a4da-4fd0802ead53: Teaser # Teaser
+    5bf4ae8e-4fcb-4ed0-bb07-7dbbb4c59050: Seo # Seo
+    6ab90ef5-054e-4ca5-ad10-ab67a6595164: Card # Card
+    6eab4b84-63fb-4382-bdd7-d2bee959aafb: $SITE_NAME # $SITE_NAME
+    07c61af5-375b-4586-bb91-7fed5cbf160d: Search # Search
+    7cdf6921-13c4-4984-95cd-9ac60231929d: 'Rich Text - Builder' # Rich Text - Builder
+    9b278eea-1d19-4a12-87d0-8fd0d4ccade2: Gallery # Gallery
+    17c0c6a4-80a6-4cef-84f4-ebefe3af9d39: 'Text - Multi' # Text - Multi
+    036fe1f3-1a67-4bc2-a89f-aa606c436474: Pages # Pages
+    048ca300-746f-47c7-88e8-03271c08c318: 'Rich Text - Simple' # Rich Text - Simple
+    63c16184-84bf-4b0d-9617-96987ad1df39: Card # Card
+    068cbf85-9a16-4e3b-a502-593a9e10844d: Rich # Rich
+    79b79154-5b26-4a51-89c3-66cf807014af: Images # Images
+    81a8d92c-0706-448f-bd2b-8506e012dccb: 'Page / CKE Builder' # Page / CKE Builder
+    82e2a38f-ac8e-4b00-8b0c-d9ab4dc9ad7d: Media # Media
+    85ac7a39-7c84-4707-9ebc-e0f0666d6023: Simple # Simple
+    87b770e6-4e90-42b9-bee3-ce94aba9b182: 'Matrix - Cards' # Matrix - Cards
+    163e2603-df59-49f9-a112-13791fe431d2: 'Public Schema' # Public Schema
+    177e5629-be0d-45a5-8751-ee4a081d01d0: 'Switch - Off' # Switch - Off
+    521c2fd7-5f4f-42d2-8d89-e0818c2781ba: Navigation # Navigation
+    767f97e3-a9dc-4be7-9c72-296ba3cfb077: Builder # Builder
+    916e0660-c1f0-4d74-adbd-e0b797d79894: 'Page / Matrix Builder' # Page / Matrix Builder
+    6243b5f2-9474-47a0-99f2-24d5a6cc5832: 'Rich Text - Rich' # Rich Text - Rich
+    6686f777-cfa0-442a-964f-76aeefb81ba6: Categories # Categories
+    8596f203-6a19-4f0b-a499-4d70fbe9584f: thumbnail # thumbnail
+    9800e5de-6b70-4e9a-a491-54ef32087d74: 'Page / Blog Datastar' # Page / Blog Datastar
+    998295c3-03ea-4a83-b787-ba1d5a930248: 'Craft 5' # Craft 5
+    76206244-6c91-4de1-b3d0-68c5d6a77369: CTA # CTA
+    a0e826d1-b07d-436b-a836-517709848314: Text # Text
+    a3f63eae-3ce5-48bf-8d1f-7f98792227d6: Category # Category
+    b049044a-c809-41e6-9e27-43e22b6c394b: Accordion # Accordion
+    c05cf09b-1380-4613-8fd9-1e1a72af0e79: 'Text - Single' # Text - Single
+    c07bd68f-efab-420f-ad23-7131c2b59410: Grid # Grid
+    c2078d68-c6cf-42ee-ad68-931b8a4b5cdb: 'Link - Native' # Link - Native
+    ca8ca091-579e-4b7b-8367-c496ca94f94a: Search # Search
+    ceb614ca-f066-47cb-8d5e-647c282b69db: Button # Button
+    d2c185ad-8cc0-4ff6-bae6-f4f27e1c256c: 'Page / Blog Vue' # Page / Blog Vue
+    d6ccb54a-08e3-4b74-b2d0-b0b7d04be82b: Home # Home
+    d55a22f5-2f99-4c7c-822f-eb8623035eeb: Navigation # Navigation
+    d55b1175-f5cd-4977-8625-4333d431a8f6: Files # Files
+    dbbb65c3-5ee4-438d-8436-b6e57e74daf5: 'Relation - Categories' # Relation - Categories
+    e350ba4f-78d8-4850-b773-09f4d8d9a9b5: Common # Common
+    e695ec0b-5690-4d85-a2bc-cab65554571d: 'Page / Blog' # Page / Blog
+    e2850ac0-af58-4d32-9596-b15239d9567e: Image # Image
+    f031cebf-f66e-478f-971f-53923dc0c7f2: 'File - Media' # File - Media
+    f1af4550-8b3b-46b7-926d-f0807cac7bf3: Cards # Cards
+    f2506d06-ffe1-4e72-a921-0af05fc12846: 'Matrix - Buttons' # Matrix - Buttons
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  datastar:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  seomate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: $SITE_NAME
+  retryDuration: null
+  schemaVersion: 5.8.0.3
+  timeZone: Europe/Berlin

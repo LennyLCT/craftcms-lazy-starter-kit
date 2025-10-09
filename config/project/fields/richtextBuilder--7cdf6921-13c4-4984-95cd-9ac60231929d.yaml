@@ -1,0 +1,58 @@
+columnSuffix: null
+handle: richtextBuilder
+instructions: null
+name: 'Rich Text - Builder'
+searchable: true
+settings:
+  availableTransforms: ''
+  availableVolumes:
+    - d55b1175-f5cd-4977-8625-4333d431a8f6 # Files
+  characterLimit: null
+  ckeConfig: 767f97e3-a9dc-4be7-9c72-296ba3cfb077 # Builder
+  createButtonLabel: null
+  defaultTransform: null
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - b049044a-c809-41e6-9e27-43e22b6c394b # Accordion
+    -
+      __assoc__:
+        -
+          - uid
+          - 82e2a38f-ac8e-4b00-8b0c-d9ab4dc9ad7d # Media
+    -
+      __assoc__:
+        -
+          - uid
+          - 9b278eea-1d19-4a12-87d0-8fd0d4ccade2 # Gallery
+    -
+      __assoc__:
+        -
+          - uid
+          - f1af4550-8b3b-46b7-926d-f0807cac7bf3 # Cards
+    -
+      __assoc__:
+        -
+          - uid
+          - 2cec4e62-8325-4329-b76c-d5c7ae7af576 # Buttons
+    -
+      __assoc__:
+        -
+          - uid
+          - 76206244-6c91-4de1-b3d0-68c5d6a77369 # CTA
+  expandEntryButtons: true
+  fullGraphqlData: false
+  parseEmbeds: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

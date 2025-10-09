@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: grid2cols
+instructions: null
+name: Grid
+searchable: false
+settings:
+  default: false
+  offLabel: '3 cols'
+  onLabel: '2 cols'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

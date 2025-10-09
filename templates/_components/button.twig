@@ -1,0 +1,28 @@
+{% set _label = label ?? 'Click me' %}
+{% set _url = url ?? null %}
+{% set _target = target ?? null %}
+{% set _ariaLabel = ariaLabel ?? null %}
+{% set _download = download ?? null %}
+{% set _size = size ?? null %}
+{% set _class = class ?? '' %}
+{% set _dataAnimate = dataAnimate ?? null %}
+{% set _rel = _target ? 'noopener noreferrer' : null %}
+
+{% set classes = [
+  'ui-btn',
+  'ui-btn--' ~ _size,
+  _class
+]|filter(v => v)|join(' ') %}
+
+{% if _url %}
+  {{ tag('a', {
+    text: _label,
+    href: _url,
+    target: _target ? '_blank' : null,
+    rel: _rel,
+    'aria-label': _ariaLabel,
+    download: _download,
+    class: classes,
+    'data-animate': _dataAnimate,
+  }) }}
+{% endif %}

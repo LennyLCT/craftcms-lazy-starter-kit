@@ -1,0 +1,29 @@
+{% set type = type ?? 'page' %}
+{% set search = signals.search ?? null %}
+{% set q = craft.entries.section(['blog', 'pages']) %}
+{% set entries = search ? q.search(search).orderBy('score desc, postDate desc').limit(100).all : [] %}
+
+{% if entries %}
+  {% patchelements %}
+    <div id="searchresult-{{ type }}">
+      <p class="mb-4">✅ {{ entries|length }} results found</p>
+      <div class="divide-y divide-stone-300 space-y-3">
+        {% for entry in entries %}
+          <p class="py-3">
+            <a href="{{ entry.url }}" class="hover:text-primary">👉 {{ entry.title }} / {{ entry.section.handle }}</a>
+          </p>
+        {% endfor %}
+      </div>
+    </div>
+  {% endpatchelements %}
+{% else %}
+  {% patchelements %}
+    <div id="searchresult-{{ type }}">
+      {% if not search %}
+        <p>💡 Try entering a search term, e.g. "frontend"</p>
+      {% else %}
+        <p>🫣 No results found for "{{ search }}". Try a different keyword.</p>
+      {% endif %}
+    </div>
+  {% endpatchelements %}
+{% endif %}

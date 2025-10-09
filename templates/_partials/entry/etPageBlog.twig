@@ -1,0 +1,37 @@
+{% set image = entry.card.image.eagerly().one() ?? null %}
+{% set category = entry.relationCategories.one() ?? null %}
+{% set date = entry.date|date('d.m.Y') %}
+
+<div class="ui-card relative">
+  {% if category %}
+    <span class="absolute py-1 px-2 shadow ui-bold -top-3 right-5 bg-black/50 backdrop-blur-sm text-base text-white rounded-sm">{{ category }}</span>
+  {% endif %}
+  {% if image %}
+    <div class="aspect-video">
+      {{ include("_components/image.twig", {
+        image: image,
+        sizes: [480],
+        objectFit: true
+      }, withContext = false) }}
+    </div>
+  {% endif %}
+  <div class="space-y-6 p-4">
+    <div>
+      {% if date %}
+        <p class="text-base text-primary ui-bold mb-2">{{ date }}</p>
+      {% endif %}
+      <h2 class="ui-h5">
+        {{ entry.headline ? entry.headline|nl2br : entry.title }}
+      </h2>
+    </div>
+    {% if entry.card.teaser %}
+      <div class="prose md:prose-lg">
+        {{ entry.card.teaser }}
+      </div>
+    {% endif %}
+    {% include '_components/button.twig' with {
+      label: "Read more"|t,
+      url: entry.url
+    } %}
+  </div>
+</div>

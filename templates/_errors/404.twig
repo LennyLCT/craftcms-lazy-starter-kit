@@ -1,0 +1,14 @@
+{% extends "_layouts/base" %}
+
+{% block main %}
+
+  <section class="blocks blocks--error">
+    <div class="blocks__content space-y-6">
+      <p class="text-9xl ui-bold">404</p>
+      <p class="text-4xl ui-bold">{{ 'Page not found.'|t }}</p>
+      <p class="text-2xl">{{ 'Sorry, the page your\'re looking for could not be found.'|t }}</p>
+      <a href="/" class="ui-btn ui-btn--lg">{{ 'Home'|t }}</a>
+    </div>
+  </section>
+
+{% endblock %}

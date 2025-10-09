@@ -1,0 +1,40 @@
+color: green
+description: null
+fieldLayouts:
+  052d21df-b7e5-4c62-9eae-b4031301e946:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-09-18T12:39:24+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 3fc916d4-15ce-4a6b-b91c-c80649f001bd # Matrix - Accordion
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Accordion
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: acba41d9-1cf6-4546-a2a5-3d0c83b6c5ba
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 39f9537b-ac1c-4ff4-bedb-512f5db9974c
+        userCondition: null
+handle: blockAccordions
+hasTitleField: false
+icon: bars
+name: Accordion
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

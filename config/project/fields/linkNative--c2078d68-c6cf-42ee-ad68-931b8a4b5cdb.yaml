@@ -1,0 +1,70 @@
+columnSuffix: null
+handle: linkNative
+instructions: null
+name: 'Link - Native'
+searchable: false
+settings:
+  advancedFields:
+    - target
+    - ariaLabel
+    - download
+  fullGraphqlData: false
+  maxLength: 255
+  showLabelField: true
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowedKinds
+              -
+                - pdf
+            -
+              - showUnpermittedVolumes
+              - ''
+            -
+              - showUnpermittedFiles
+              - ''
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              -
+                - singles
+                - 'section:04c7059c-00d6-416e-a590-757fea296201' # Blog
+                - 'section:036fe1f3-1a67-4bc2-a89f-aa606c436474' # Pages
+            -
+              - showUnpermittedSections
+              - '1'
+            -
+              - showUnpermittedEntries
+              - '1'
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - '1'
+            -
+              - allowAnchors
+              - '1'
+            -
+              - allowCustomSchemes
+              - ''
+  types:
+    - entry
+    - asset
+    - url
+    - email
+    - tel
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

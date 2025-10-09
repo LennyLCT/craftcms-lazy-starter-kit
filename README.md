@@ -46,7 +46,7 @@ Get up and running with **CraftCMS Lazy** in just a few steps.
 
 ```bash
 # Clone the repository
-git clone https://github.com/andee-grether/craftcms-lazy-starter-kit.git
+git clone https://github.com/handplant/craftcms-lazy-starter-kit
 cd craftcms-lazy-starter-kit
 
 # Copy the environment file

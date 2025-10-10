@@ -15,7 +15,7 @@
   /*FORMS*/
   .ui-select {
     @apply border-4 border-black
-    rounded-sm w-full shrink-0
+    rounded-sm
     focus:outline-none
     focus:border-primary
     focus:ring-4 focus:ring-primary/20
@@ -24,7 +24,7 @@
 
   .ui-input {
     @apply border-4 border-black
-    rounded-sm w-full shrink-0
+    rounded-sm
     focus:outline-none
     focus:border-primary
     focus:ring-4 focus:ring-primary/20

@@ -12,4 +12,16 @@
     @apply ui-bold;
   }
 
+  :focus {
+    @apply outline-none;
+  }
+
+  :focus-visible {
+    @apply ring-2 ring-primary ring-offset-2 rounded-sm;
+  }
+
+  :focus:not(:focus-visible) {
+    @apply ring-0;
+  }
+
 }

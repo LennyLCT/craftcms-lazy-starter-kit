@@ -4,8 +4,9 @@
   <input
     id="searchInput-{{ type }}"
     type="text"
-    class="ui-input mb-4"
+    class="ui-input w-full mb-4"
     placeholder="Type to search..."
+    aria-label="Search"
     data-indicator-fetching
     data-bind-search
     data-on-input__debounce.300ms="{{ datastar.post('_datastar/search.twig', {

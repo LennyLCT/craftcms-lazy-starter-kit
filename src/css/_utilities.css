@@ -27,7 +27,7 @@
 }
 
 @utility ui-link {
-  @apply underline underline-offset-4 hover:no-underline hover:text-primary;
+  @apply underline underline-offset-4 hover:no-underline hover:text-primary transition;
 }
 
 @utility ui-focus {

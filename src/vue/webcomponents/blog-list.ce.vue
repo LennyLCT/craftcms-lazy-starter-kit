@@ -52,6 +52,7 @@ async function fetchEntries (reset = false) {
               thumbnail: url(transform: "thumbnail")
               width
               height
+              alt
             }
           }
           relationCategories {
@@ -140,6 +141,7 @@ onMounted(() => {
               :src="entry.card.image[0].thumbnail"
               :width="entry.card.image[0].width"
               :height="entry.card.image[0].height"
+              :alt="entry.card.image[0].alt"
               class="w-full h-full object-cover"
               loading="lazy"
             />

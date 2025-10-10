@@ -16,7 +16,7 @@
   {{ include('_components/label.twig', {
     label: "Block Call to action"
   }) }}
-  <div class="stack stack--end">
+  <div class="stack stack--end relative">
     {% if image %}
       <div
         data-animate="fade-in"
@@ -41,7 +41,7 @@
             size: 'lg',
             target: button.target ? '_blank' : null,
             rel: button.target ? 'noopener noreferrer' : null,
-            'aria-label': button.ariaLabel,
+            ariaLabel: button.ariaLabel,
             download: button.download,
           } %}
         {% endif %}

@@ -1,26 +1,13 @@
 {% set search = craft.entries.section('search').one() %}
 
-<div data-show="$modal == true"
-     class="fixed inset-0 z-50 bg-white/90 backdrop-blur-md p-6">
-  <button class="absolute top-3 right-3 cursor-pointer hover:text-primary" data-on-click="$modal = false" aria-label="Close">
-    <svg
-      class="h-9 stroke-current text-black"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke-width="2.5"
-    >
-      <path
-        stroke-linecap="butt"
-        stroke-linejoin="miter"
-        d="M18.278 16.864l-4.829-4.828-4.828 4.828-1.414-1.414 4.828-4.829-4.828-4.828 1.414-1.414 4.829 4.828 4.828-4.828 1.414 1.414-4.828 4.829 4.828 4.828z"
-      />
-    </svg>
-  </button>
-  <div class="max-w-3xl mx-auto relative">
-    <p class="ui-h1 text-center my-6">{{ search.title }}</p>
-    {{ search.render({
-      type: 'modal',
-    }) }}
+<section class="blocks blocks--search" data-show="$searchOpen == true">
+  <div class="blocks__content">
+    <div class="bg-stone-200 rounded-md p-8">
+      <p class="ui-bold">{{ search.title }}</p>
+      {{ search.render({
+        type: 'modal',
+      }) }}
+    </div>
   </div>
-</div>
+</section>
+

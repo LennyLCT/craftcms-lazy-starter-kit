@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cpresources/
+Disallow: /actions/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /config/
+Disallow: /storage/
+Disallow: /templates/
+
+Allow: /
+
+Sitemap: https://craftcms-lazy-starter-kit.webworker.me/sitemap.xml

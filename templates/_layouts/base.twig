@@ -10,7 +10,10 @@
   {% include "_globals/matomo" %}
   {{ craft.vite.script("src/js/app.js", false) }}
 </head>
-<body data-signals="{ searchOpen: false, navOpen: false }">
+<body
+  data-signals="{ searchOpen: false, navOpen: false }"
+  data-effect="if ($searchOpen) { window.scrollTo({ top: 0, behavior: 'smooth' }); }"
+>
 {% cache globally using key 'nav__' ~ craft.app.request.pathInfo %}
   {% include '_globals/nav' %}
 {% endcache %}

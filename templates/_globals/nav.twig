@@ -1,4 +1,5 @@
 {% set home = craft.entries.section('home').one() %}
+{% set search = craft.entries.section('search').one() %}
 {% set navItems = craft.entries.section("navigations").eagerly().level(1).all() ?? null %}
 
 <nav
@@ -40,10 +41,14 @@
           {% endfor %}
         </ul>
       </div>
+      {% set isSearchPage = entry is defined and entry.id == search.id %}
       <button
-        class="flex items-center cursor-pointer hover:text-primary"
-        data-on-click="$searchOpen = !$searchOpen; $navOpen = false"
-        data-attr="{ 'aria-label': $searchOpen ? 'Close search' : 'Open search' }"
+        class="flex items-center cursor-pointer hover:text-primary {{ isSearchPage ? 'text-primary pointer-events-none' : '' }}"
+        {% if not isSearchPage %}
+          data-on-click="$searchOpen = !$searchOpen; $navOpen = false"
+          data-attr="{ 'aria-label': $searchOpen ? 'Close search' : 'Open search' }"
+        {% endif %}
+        {{ isSearchPage ? 'aria-disabled="true"' }}
         type="button"
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-10">

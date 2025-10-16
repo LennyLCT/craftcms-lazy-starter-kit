@@ -23,7 +23,7 @@
               data-bind-filter
               data-indicator-fetching
               data-attr-disabled="$fetching"
-              data-on-input="{{ datastar.post('_datastar/blog.twig', { offset: 0 }) }}"
+              data-on-input="{{ datastar.get('_datastar/blog.twig', { offset: 0 }) }}"
               aria-label="Blog-Kategorie filtern"
               class="ui-select">
               <option value="">{{ 'Show all'|t }}</option>

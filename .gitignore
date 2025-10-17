@@ -10,11 +10,15 @@
 
 # ASSETS
 /web/cpresources/*
-/web/dist/*
 # /web/uploads would normally be ignored in production
 # but is included here for the demo setup.
 # Uncomment the following line in your own projects:
 # /web/uploads
+
+# Compiled frontend assets – ignore in production.
+# These files are built during deployment (e.g. via Vite or Webpack)
+# and should not be committed to version control.
+# /web/dist
 
 # BUILD FILES
 /node_modules/*

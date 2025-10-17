@@ -1,0 +1,17 @@
+{
+  "src/js/app.js": {
+    "file": "assets/app--lmhMQgb.js",
+    "name": "app",
+    "src": "src/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-BxmRGJdi.css"
+    ]
+  },
+  "src/vue/webcomponents/blog-list.ce.ts": {
+    "file": "assets/blog-list-BtaH3nXm.js",
+    "name": "blog-list",
+    "src": "src/vue/webcomponents/blog-list.ce.ts",
+    "isEntry": true
+  }
+}

@@ -27,7 +27,7 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "fast-glob": "^3.3.3",
     "tailwindcss": "^4.1.14",
-    "vite": "^7.1.9",
+    "vite": "^7.1.10",
     "vite-plugin-restart": "^1.0.0",
     "vue": "^3.5.22"
   },

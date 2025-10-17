@@ -3,6 +3,15 @@
 {% set q = craft.entries.section(['blog', 'pages']) %}
 {% set entries = search ? q.search(search).orderBy('score desc, postDate desc').limit(100).all : [] %}
 
+{% if search %}
+  {% executescript %}
+    console.log( '%c🚀 Lazy Search Scanner Initialized', 'background: linear-gradient(to right, #0af, #00e0ff); color: #000; font-weight: bold; padding: 6px 10px; border-radius: 5px; font-size: 12px;' );
+    console.log( '%c🔍 Search query detected:', 'color: #ff0; font-size: 13px; font-weight: bold; padding: 2px 0;');
+    console.log( '%c{{ search|e('js') }}', 'color: #fff; background: #1e1e1e; padding: 6px 12px; border-radius: 6px; font-family: monospace; font-size: 14px; box-shadow: 0 0 4px rgba(0,0,0,0.3);' );
+    _paq.push(['trackEvent', 'Search', 'Query', '{{ search|e('js') }}']);
+  {% endexecutescript %}
+{% endif %}
+
 {% if entries %}
   {% patchelements %}
     <div id="searchresult-{{ type }}">
@@ -21,8 +30,17 @@
     <div id="searchresult-{{ type }}">
       {% if not search %}
         <p>💡 Try entering a search term, e.g. "frontend"</p>
+        {% executescript %}
+          console.log('%c🔍 Waiting for input...', 'color: #0af; font-weight: bold; font-size: 12px;');
+          console.log('%cTry something like "frontend", "craft", or "magic unicorns".', 'color: #fff; background: #222; padding: 4px 8px; border-radius: 4px; font-family: monospace;');
+        {% endexecutescript %}
       {% else %}
         <p>🫣 No results found for "{{ search }}". Try a different keyword.</p>
+        {% executescript %}
+          console.log('%c😵 No results for:', 'color: #f00; font-weight: bold; font-size: 12px;');
+          console.log('%c{{ search|e('js') }}', 'color: #fff; background: #f00; padding: 4px 8px; border-radius: 4px; font-family: monospace;');
+          console.log('%c📦 Your search box is empty. Try "matrix", "frontend", or summon the dev gods with "bug-free".', 'color: #999; font-style: italic; font-size: 11px;');
+        {% endexecutescript %}
       {% endif %}
     </div>
   {% endpatchelements %}

@@ -1,24 +1,26 @@
 {% extends '_layouts/base' %}
 
+{% set category = entry.relationCategories.one() ?? null %}
+
 {% block main %}
   {% cache using key 'entry__' ~ craft.app.request.pathInfo %}
     <header class="blocks blocks--header">
       <div class="blocks__content">
-        {% if entry.date %}
-          <p class="text-primary ui-bold mb-2">{{ entry.date|date('d.m.Y') }}</p>
-        {% endif %}
+        <div class="flex justify-between mb-2">
+          {% if entry.date %}
+            <p class="text-primary ui-bold">{{ entry.date|date('d.m.Y') }}</p>
+          {% endif %}
+          {% if category %}
+            <span class="py-1 px-2 shadow ui-bold -top-3 right-5 bg-black/50 backdrop-blur-sm text-base text-white rounded-sm">{{ category }}</span>
+          {% endif %}
+        </div>
         <h1 class="ui-h1">{{ entry.headline ? entry.headline|nl2br : entry.title }}</h1>
       </div>
       {% if entry.card.image %}
-        <div class="blocks__content">
+        <div class="blocks__popout">
           {{ include("_components/image.twig", {
             image: entry.card.image.eagerly().one()
           }, withContext = false) }}
-        </div>
-      {% endif %}
-      {% if entry.card.teaser %}
-        <div class="blocks__content prose md:prose-lg lg:prose-xl">
-          {{ entry.card.teaser }}
         </div>
       {% endif %}
     </header>

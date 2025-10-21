@@ -39,7 +39,7 @@ async function fetchEntries (reset = false) {
 
   const query = `
     query ($section: [String], $limit: Int, $offset: Int, $category: [QueryArgument]) {
-      entries(section: $section, limit: $limit, offset: $offset, relatedTo: $category) {
+      entries(section: $section, limit: $limit, offset: $offset, relatedTo: $category, orderBy: "date desc") {
         id
         title
         url

@@ -1,11 +1,11 @@
 {
   "src/js/app.js": {
-    "file": "assets/app-DTx4_Ro1.js",
+    "file": "assets/app-CpKuFgqy.js",
     "name": "app",
     "src": "src/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-BDdgQZUi.css"
+      "assets/app-onhRQ4EO.css"
     ]
   },
   "src/vue/webcomponents/blog-list.ce.ts": {

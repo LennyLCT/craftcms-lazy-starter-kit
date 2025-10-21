@@ -21,6 +21,11 @@ settings:
       __assoc__:
         -
           - uid
+          - 94ef075b-ba6b-4c18-9200-1ed39a0e1d1e # Code
+    -
+      __assoc__:
+        -
+          - uid
           - 82e2a38f-ac8e-4b00-8b0c-d9ab4dc9ad7d # Media
     -
       __assoc__:

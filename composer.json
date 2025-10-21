@@ -1,7 +1,14 @@
 {
   "name": "handplant/craftcms-lazy-starter-kit",
   "description": "A simple Craft CMS starter kit for agencies, freelancers, and developers.",
-  "keywords": ["craftcms", "starter-kit", "boilerplate", "vite", "ddev", "datastar"],
+  "keywords": [
+    "craftcms",
+    "starter-kit",
+    "boilerplate",
+    "vite",
+    "ddev",
+    "datastar"
+  ],
   "license": "MIT",
   "type": "project",
   "authors": [
@@ -20,6 +27,7 @@
   "require": {
     "craftcms/ckeditor": "4.10.1",
     "craftcms/cms": "5.8.18",
+    "nystudio107/craft-code-field": "5.0.1",
     "nystudio107/craft-vite": "5.0.1",
     "putyourlightson/craft-datastar": "1.0.0-RC.8",
     "vaersaagod/seomate": "3.2.0",

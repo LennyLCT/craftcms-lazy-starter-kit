@@ -1,4 +1,4 @@
-dateModified: 1760014415
+dateModified: 1761044935
 elementSources:
   craft\elements\Entry:
     -
@@ -128,6 +128,7 @@ meta:
     82e2a38f-ac8e-4b00-8b0c-d9ab4dc9ad7d: Media # Media
     85ac7a39-7c84-4707-9ebc-e0f0666d6023: Simple # Simple
     87b770e6-4e90-42b9-bee3-ce94aba9b182: 'Matrix - Cards' # Matrix - Cards
+    94ef075b-ba6b-4c18-9200-1ed39a0e1d1e: Code # Code
     163e2603-df59-49f9-a112-13791fe431d2: 'Public Schema' # Public Schema
     177e5629-be0d-45a5-8751-ee4a081d01d0: 'Switch - Off' # Switch - Off
     521c2fd7-5f4f-42d2-8d89-e0818c2781ba: Navigation # Navigation
@@ -141,6 +142,7 @@ meta:
     76206244-6c91-4de1-b3d0-68c5d6a77369: CTA # CTA
     a0e826d1-b07d-436b-a836-517709848314: Text # Text
     a3f63eae-3ce5-48bf-8d1f-7f98792227d6: Category # Category
+    a44cd88c-10a5-4ee3-b9e4-795e2f4f208c: Code # Code
     b049044a-c809-41e6-9e27-43e22b6c394b: Accordion # Accordion
     c05cf09b-1380-4613-8fd9-1e1a72af0e79: 'Text - Single' # Text - Single
     c07bd68f-efab-420f-ad23-7131c2b59410: Grid # Grid
@@ -163,6 +165,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  codefield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   datastar:
     edition: standard
     enabled: true

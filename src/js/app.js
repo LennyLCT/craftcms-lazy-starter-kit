@@ -1,7 +1,18 @@
 import '../css/app.css'
 import 'glightbox/dist/css/glightbox.css'
+import 'highlight.js/styles/github-dark.css'
 import { animate, stagger, onScroll } from 'animejs'
 import GLightbox from 'glightbox'
+import hljs from 'highlight.js/lib/core'
+import twig from 'highlight.js/lib/languages/twig'
+import bash from 'highlight.js/lib/languages/bash'
+import xml from 'highlight.js/lib/languages/xml'
+import javascript from 'highlight.js/lib/languages/javascript'
+
+hljs.registerLanguage('twig', twig)
+hljs.registerLanguage('bash', bash)
+hljs.registerLanguage('javascript', javascript)
+hljs.registerLanguage('xml', xml)
 
 // START
 document.documentElement.classList.add('js-enabled')
@@ -9,6 +20,11 @@ console.log(
   '%cMade with Craft CMS and 🤍 by Andi Grether / webworker.me',
   'font-size: 13px; font-weight: bold; color: #fff; background-color: #e5422b; padding: 10px 12px; margin: 5px 0;',
 )
+
+// Highlight all code blocks after page load
+document.addEventListener('DOMContentLoaded', () => {
+  hljs.highlightAll()
+})
 
 // GLIGHTBOX
 const lightbox = GLightbox({

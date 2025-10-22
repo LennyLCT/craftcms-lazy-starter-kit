@@ -1,4 +1,4 @@
-dateModified: 1761044935
+dateModified: 1761128768
 elementSources:
   craft\elements\Entry:
     -
@@ -57,14 +57,14 @@ elementSources:
       defaultSort:
         - structure
         - asc
+      defaultViewMode: ''
       disabled: false
       key: 'section:d55a22f5-2f99-4c7c-822f-eb8623035eeb' # Navigation
       tableAttributes:
         - status
+        - type
         - dateCreated
-        - authors
         - dateUpdated
-        - revisionCreator
       type: native
     -
       defaultSort:
@@ -131,7 +131,7 @@ meta:
     94ef075b-ba6b-4c18-9200-1ed39a0e1d1e: Code # Code
     163e2603-df59-49f9-a112-13791fe431d2: 'Public Schema' # Public Schema
     177e5629-be0d-45a5-8751-ee4a081d01d0: 'Switch - Off' # Switch - Off
-    521c2fd7-5f4f-42d2-8d89-e0818c2781ba: Navigation # Navigation
+    521c2fd7-5f4f-42d2-8d89-e0818c2781ba: 'Navigation / Link' # Navigation / Link
     767f97e3-a9dc-4be7-9c72-296ba3cfb077: Builder # Builder
     916e0660-c1f0-4d74-adbd-e0b797d79894: 'Page / Matrix Builder' # Page / Matrix Builder
     6243b5f2-9474-47a0-99f2-24d5a6cc5832: 'Rich Text - Rich' # Rich Text - Rich
@@ -143,6 +143,7 @@ meta:
     a0e826d1-b07d-436b-a836-517709848314: Text # Text
     a3f63eae-3ce5-48bf-8d1f-7f98792227d6: Category # Category
     a44cd88c-10a5-4ee3-b9e4-795e2f4f208c: Code # Code
+    a359a358-f5ae-4b0b-a21a-9fdaadb38180: 'Navigation / Label' # Navigation / Label
     b049044a-c809-41e6-9e27-43e22b6c394b: Accordion # Accordion
     c05cf09b-1380-4613-8fd9-1e1a72af0e79: 'Text - Single' # Text - Single
     c07bd68f-efab-420f-ad23-7131c2b59410: Grid # Grid

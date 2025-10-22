@@ -1,0 +1,50 @@
+{% set _class = class ?? '' %}
+{% set _classActive = classActive ?? '' %}
+{% set children = entry.getChildren() ?? null %}
+
+{% set isChildActive = children
+  |filter(child => (child.button.element ?? null) and (child.button.element.uri == craft.app.request.pathInfo))
+  |length > 0 %}
+
+{% if isChildActive %}
+  {% set _class = _class ~ " " ~ _classActive %}
+{% endif %}
+
+{% if entry.level == 1 %}
+  <button
+    type="button"
+    class="{{ _class }} flex gap-1 group"
+    aria-haspopup="true"
+    aria-controls="dropdown-{{ entry.id }}"
+    data-on-click="$dropdownOpen = $dropdownOpen === {{ entry.id }} ? false : {{ entry.id }}"
+    data-attr="{ 'aria-expanded': $dropdownOpen === '{{ entry.id }}' ? 'true' : 'false' }"
+  >
+    <span>{{ entry.title }}</span>
+    {% if children|length %}
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+           stroke-width="1.5" stroke="currentColor"
+           class="size-5 transition-transform"
+           data-class="{
+         'rotate-180': $dropdownOpen === {{ entry.id }},
+         'rotate-0': $dropdownOpen !== {{ entry.id }}
+       }">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+    {% endif %}
+  </button>
+
+  {% if children|length %}
+    <ul
+      id="dropdown-{{ entry.id }}"
+      class="hidden switch:flex switch:absolute switch:z-30 switch:min-w-56 bg-primary text-white text-base ui-bold p-3 flex-col gap-2 opacity-0 translate-y-4 pointer-events-none transition-all duration-300 ease-out"
+      data-class="{
+      'flex opacity-100 translate-y-2 pointer-events-auto': $dropdownOpen === {{ entry.id }},
+      'hidden opacity-0 translate-y-4 pointer-events-none': $dropdownOpen !== {{ entry.id }}
+    }"
+    >
+      {% for item in children %}
+        {{ item.render({ class: 'whitespace-nowrap', classActive: 'underline underline-offset-4 decoration-2' }) }}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endif %}

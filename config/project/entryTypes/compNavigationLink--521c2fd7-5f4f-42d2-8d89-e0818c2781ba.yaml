@@ -46,10 +46,10 @@ fieldLayouts:
         name: Content
         uid: 690d9211-f702-467d-8ca2-0d8edd7ce213
         userCondition: null
-handle: compNavigation
+handle: compNavigationLink
 hasTitleField: false
 icon: bars
-name: Navigation
+name: 'Navigation / Link'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

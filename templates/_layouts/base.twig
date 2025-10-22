@@ -11,7 +11,7 @@
   {{ craft.vite.script("src/js/app.js", false) }}
 </head>
 <body
-  data-signals="{ searchOpen: false, navOpen: false }"
+  data-signals="{ searchOpen: false, navOpen: false, dropdownOpen: false }"
   data-effect="if ($searchOpen) { window.scrollTo({ top: 0, behavior: 'smooth' }); }"
 >
 {% cache globally using key 'nav__' ~ craft.app.request.pathInfo %}
@@ -22,7 +22,11 @@
   {% block main %}{% endblock %}
 </main>
 {% include '_globals/footer' %}
-{% if entry is defined and canSave(entry) %}<a href="{{ cpUrl("preview/#{entry.id}") }}" title="Edit {{ entry.title }}" target="_blank" class="hidden lg:inline fixed bottom-0 left-0 p-4">
-    ✏️</a>{% endif %}
+{% if entry is defined and canSave(entry) %}
+  <a href="{{ cpUrl("preview/#{entry.id}") }}" title="Edit {{ entry.title }}" target="_blank" class="hidden lg:inline fixed bottom-0 left-0 p-4">✏️</a>
+{% endif %}
+{% if currentUser and currentUser.admin %}
+  <pre data-json-signals class="hidden xl:block fixed bottom-0 right-0 p-4 text-xs bg-black text-white"></pre>
+{% endif %}
 </body>
 </html>

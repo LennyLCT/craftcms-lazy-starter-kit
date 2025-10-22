@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0] – 2025-10-22
+
+- Added support for a second-level navigation using Datastar signals.
+- Implemented dropdown toggle behavior for nested menu items.
+- Improved markup and transitions for a smoother UX across devices.
+- Refined active state detection for parent items when a child is active.
+
 ## [1.1.0] - 2025-10-21
 
 ### Added
@@ -7,11 +14,6 @@
 - ✨ **Code Field Plugin** for better code input in the CMS.
 - 🧱 New **Builder Block: `Code`** for flexible code rendering on the frontend.
 - 🪄 Syntax highlighting using **Highlight.js** (supports Twig, Bash & Vue/JS).
-
-### Changed
-
-- Updated build and assets.
-- Cleaned up and adjusted dependencies.
 
 ### Notes
 

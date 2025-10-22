@@ -1,5 +1,5 @@
-{% set _class = class ?? 'ui-btn' %}
-{% set _classActive = classActive ?? 'ui-btn--active' %}
+{% set _class = class ?? '' %}
+{% set _classActive = classActive ?? '' %}
 {% set _element = entry.button.element ?? null %}
 
 {% if _element and _element.uri == craft.app.request.pathInfo %}

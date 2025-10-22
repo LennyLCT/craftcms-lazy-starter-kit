@@ -7,6 +7,10 @@
     @apply w-full;
   }
 
+  button {
+    @apply cursor-pointer;
+  }
+
   strong,
   b {
     @apply ui-bold;

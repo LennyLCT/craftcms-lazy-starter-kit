@@ -6,7 +6,7 @@
   class="fixed inset-x-0 top-0 z-30 h-16 bg-white/90 layout"
   data-class="{ 'bg-stone-200/90': $navOpen, 'bg-white/90': !$navOpen }"
   data-on-keydown="if (event.key === 'Escape') $navOpen = false, $searchOpen = false"
-  data-on-click__outside="$navOpen = false"
+  data-on-click__outside="$navOpen = false, $dropdownOpen = false"
 >
   <div class="flex items-center justify-between gap-3 w-full layout__feature ">
     <div class="flex items-center shrink-0 mr-auto">
@@ -35,8 +35,8 @@
       >
         <ul class="items-center justify-end flex-1 h-full space-y-4 switch:flex switch:space-y-0 switch:space-x-4">
           {% for item in navItems %}
-            <li class="h-full">
-              {{ item.render({ class: 'p-1 ui-bold inline-flex h-full items-center switch:px-2 text-black hover:text-white hover:bg-primary rounded-sm', classActive: 'bg-primary text-white' }) }}
+            <li class="h-full relative">
+              {{ item.render({ class: 'p-1 ui-bold inline-flex h-full items-center switch:px-3 text-black ', classActive: 'text-primary' }) }}
             </li>
           {% endfor %}
         </ul>

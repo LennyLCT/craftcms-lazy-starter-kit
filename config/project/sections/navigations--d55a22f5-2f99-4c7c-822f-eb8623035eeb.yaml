@@ -1,7 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 521c2fd7-5f4f-42d2-8d89-e0818c2781ba # Navigation
+  -
+    uid: a359a358-f5ae-4b0b-a21a-9fdaadb38180 # Navigation / Label
+  -
+    uid: 521c2fd7-5f4f-42d2-8d89-e0818c2781ba # Navigation / Link
 handle: navigations
 maxAuthors: 1
 name: Navigation
@@ -13,6 +16,6 @@ siteSettings:
     template: null
     uriFormat: null
 structure:
-  maxLevels: null
+  maxLevels: 2
   uid: e80d8b58-fac1-4941-8fc2-3659cbeaf295
 type: structure

